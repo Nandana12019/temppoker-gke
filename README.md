@@ -22,8 +22,22 @@ Dockerfile # Dockerfiles for backend & frontend
 
 
 ## API Endpoints (Backend)
-- `POST /api/evaluate` – Evaluate best hand
-- `POST /api/equity` – Monte Carlo equity simulation
+
+All endpoints accept JSON and are intended to be called by the frontend UI.
+
+- POST `/api/evaluate`  
+  Evaluate the best hand from 2 hole cards + 5 community cards.
+
+- POST `/api/winner`  
+  Compare two players’ hands and return the winner.
+
+- POST `/api/simulate`  
+  Monte Carlo simulation to estimate winning probability given:
+  - hero cards
+  - community cards (0–5)
+  - number of players
+  - number of simulations
+
 
 > The backend is intended to be called by the frontend UI.
 
@@ -33,10 +47,6 @@ Frontend (public URL):
 http://34.136.74.178/
 
 
-Backend (example endpoint):  
-
-
-http://104.197.178.51:8080/api/evaluate
 
 
 > Note: The external IPs may change if the cluster is redeployed.
