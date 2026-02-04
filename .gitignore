@@ -1,0 +1,23 @@
+# Flutter
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.dart_tool/
+
+# Go
+bin/
+*.exe
+
+# Node (if used)
+node_modules/
+
+# Docker
+*.log
+
+# Env / secrets
+.env
+.env.local
+
+# OS junk
+.DS_Store
+Thumbs.db
